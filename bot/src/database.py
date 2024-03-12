@@ -17,7 +17,7 @@ from sqlalchemy.ext.declarative import (
     declarative_base
 )
 
-from bot.src.config import (
+from bot.config import (
     DB_USER,
     DB_PASS,
     DB_HOST,
