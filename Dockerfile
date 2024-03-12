@@ -4,6 +4,6 @@ WORKDIR /test_bot
 
 COPY . test_bot
 
-RUN pip install -r requirements.txt
+RUN pip install -r test_bot/requirements.txt
 
 CMD ["python", "test_bot/bot/main.py"]
