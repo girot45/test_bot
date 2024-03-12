@@ -1,4 +1,6 @@
+from aiogram import types
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
+from aiogram.utils.keyboard import InlineKeyboardBuilder
 
 
 def main_menu_buttons() -> ReplyKeyboardMarkup:
@@ -17,3 +19,11 @@ def main_menu_buttons() -> ReplyKeyboardMarkup:
         resize_keyboard=True
     )
     return keyboard
+
+def sub_button(text) -> InlineKeyboardBuilder:
+    builder = InlineKeyboardBuilder()
+    builder.add(types.InlineKeyboardButton(
+        text="Подписаться",
+        callback_data=f"sub_{text}")
+    )
+    return builder
