@@ -1,9 +1,7 @@
 FROM python:3.9-slim
 
-WORKDIR /test_bot
 
-COPY . test_bot
+COPY . .
+RUN pip install -r requirements.txt
 
-RUN pip install -r test_bot/requirements.txt
-
-CMD ["python", "test_bot/bot/main.py"]
+CMD ["python", "bot/main.py"]
